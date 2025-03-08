@@ -1,0 +1,457 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>galle guide</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>galle guide</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        .nav-button {
+            position: fixed;
+            bottom: 200px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: background-color 0.3s;
+            opacity: 1;
+        }
+
+        .nav-button.hidden {
+            opacity: 0; 
+            pointer-events: none; 
+        }
+
+        .nav-button:hover {
+            background-color: #0056b3;
+        }
+
+        .nav-button i {
+            font-size: 20px;
+        }
+
+        #leftButton {
+            left: 20px;
+        }
+
+        #rightButton {
+            right: 20px;
+        }
+
+        #scrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #06971aab;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            display: none; 
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        #scrollToTop:hover {
+            background-color: #d10044;
+        }
+
+        #scrollToTop i {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav__bar" >
+        <div class="nav__logo"><a href="#"><img src="assets/images/pic/logo.png" alt="logo"  width="70px" height="70px"></a></div>
+        <ul class="nav__links">
+            <li class="link"><a href="galle visiting guide home.html">Home</a></li>
+            <li class="link"><a href="about us.html">About Us</a></li>
+            <li class="link"><a href="#discover">Discover</a></li>
+            <li class="link"><a href="blog.html">Blog</a></li>
+            <li class="link"><a href="journals.html">Journals</a></li>
+            <li class="link"><a href="assets/images/gallery.html">assets/images/gallery</a></li>
+            <li class="link"><a href="galle visiting guide home.html">Contact</a></li>
+          </li>
+        </ul>
+      </div>
+
+      <button id="scrollToTop" onclick="scrollToTop()">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.display = 'block'; // Show button when scrolled 300px down
+            } else {
+                scrollToTopBtn.style.display = 'none'; // Hide button when scrolled above 300px
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+      <script src="main.js"></script>
+
+
+      <div class="discover" id="discover">
+        <div class="section__container discover__container">
+          <h2 class="section__header">Discover the most engaging places</h2>
+          <p class="section__subheader">
+            Let's see the Galle with us with you and your family.
+          </p>
+          <div class="discover__grid">
+
+            <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/Jungle-Beach.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>Jungle Beach</h4>
+                  <p>
+                      A secluded beach near Unawatuna, perfect for a peaceful day by the sea. You can swim, snorkel, or simply enjoy the serene environment.
+                  </p>
+  
+                </div>
+              </div>
+
+            <div class="discover__card">
+              <div class="discover__image">
+                <img src="assets/images/pic/Galle.jpg" alt="discover" />
+              </div>
+              <div class="discover__card__content">
+                <h4>GALLE FORT</h4>
+                <p>
+                    UNESCO World Heritage Site: The Galle Fort is the most iconic landmark in the city, built by the Portuguese in 1588 and fortified by the Dutch during the 17th century.
+                    Explore the Ramparts: Walk along the ancient walls with stunning views of the ocean.
+                    Lighthouse: The Galle Lighthouse, located within the Fort, is one of the oldest in Sri Lanka.
+                    Museums & Galleries: Within the fort, you can visit the National Maritime Museum and explore art galleries and boutique shops.
+                </p>
+
+              </div>
+            </div>
+            
+            <div class="discover__card">
+              <div class="discover__image">
+                <img src="assets/images/pic/koggala lake.jpeg" alt="discover" />
+              </div>
+              <div class="discover__card__content">
+                <h4>Koggala Lake</h4>
+                <p><br>
+                    A short drive from Galle, this lake is dotted with small islands and is a great spot for boat trips and birdwatching. You can also visit the famous Martin Wickramasinghe Folk Museum here.
+                </p>
+
+              </div>
+            </div>
+
+            <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/Dutch Reformed Church.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>Dutch Reformed Church</h4>
+                  <p><br>
+                    One of the oldest Protestant churches in Sri Lanka, dating back to 1755. The church has fascinating architectural features and historical significance.
+                  </p>
+  
+                </div>
+              </div>
+
+              <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/Galle International Stadium.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>Galle International Stadium</h4>
+                  <p><br>
+                    If you’re a cricket fan, you’ll love visiting this picturesque stadium, known as one of the most beautiful cricket grounds in the world.
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/Unawatuna Beach.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>Unawatuna Beach</h4>
+                  <p><br>
+                    Just a short distance from Galle, this beach is famous for its golden sands and calm waters, making it ideal for swimming and relaxing.
+                  </p>
+                </div>
+              </div>
+
+              <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/Japanese Peace Pagoda.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>Japanese Peace Pagoda</h4>
+                  <p><br>
+                    Located on a hill near Unawatuna Beach, this stunning white pagoda offers panoramic views of Galle, the ocean, and surrounding greenery.
+                  </p>
+                </div>
+              </div>
+
+              <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/The Sea Turtle Hatchery.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>The Sea Turtle Hatchery</h4>
+                  <p><br>
+                    Located about 5 km from Galle, this conservation project allows visitors to learn about sea turtles and their preservation efforts.
+                  </p>
+                </div>
+              </div>
+
+              <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/Old Dutch Hospital.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>Old Dutch Hospital</h4>
+                  <p><br>
+                    A beautifully restored colonial building now home to cafes, restaurants, and boutique shops. It’s a perfect spot for dining or shopping with a view of the ocean.
+                  </p>
+                </div>
+              </div>
+
+              <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/Historical Mansion Museum.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>Historical Mansion Museum</h4>
+                  <p><br>
+                    This private museum inside Galle Fort showcases a collection of antique items that tell stories of Galle’s colonial past.
+                    These sites offer a mix of history, nature, and leisure, making Galle a fascinating destination to explore.
+                  </p>
+                </div>
+              </div>
+
+
+              
+              <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/Ariyapala Masks Museum – Ambalangoda.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>Ariyapala Masks Museum – Ambalangoda</h4>
+                  <p><br>
+                    About 30 km from Galle, this museum in Ambalangoda is dedicated to traditional Sri Lankan mask-making, showcasing the country’s rich cultural heritage. You can learn about the ancient art of mask carving and its role in rituals and folk theater.
+                  </p>
+                </div>
+              </div>
+
+              <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/Hikkaduwa Beach & Coral Sanctuary.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>Hikkaduwa Beach & Coral Sanctuary</h4>
+                  <p><br>
+                    About 20 km from Galle, Hikkaduwa is famous for its coral reefs, making it a great spot for snorkeling and diving. The beach also offers plenty of water sports, lively restaurants, and vibrant nightlife.
+                  </p>
+                </div>
+              </div>
+
+              <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/Sinharaja Forest Reserve.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>Sinharaja Forest Reserve</h4>
+                  <p><br>
+                    A bit further inland, Sinharaja is a UNESCO World Heritage Site and one of the last remaining rainforests in Sri Lanka. A day trip here will immerse you in rich biodiversity, perfect for nature lovers and bird watchers.
+                  </p>
+                </div>
+              </div>
+
+              <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/Mihiripenna Beach.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>Mihiripenna Beach</h4>
+                  <p><br>
+                    A quieter alternative to the more popular Unawatuna Beach, Mihiripenna offers a more tranquil atmosphere with clear waters, ideal for swimming and relaxing.
+                  </p>
+                </div>
+              </div>
+
+              <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/Meeran Mosque.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>Meeran Mosque</h4>
+                  <p><br>
+                    One of the most notable mosques in Galle, located within the fort, Meeran Mosque blends elements of Islamic architecture with colonial styles. It’s worth visiting for its serene beauty and historical significance.
+                  </p>
+                </div>
+              </div>
+
+              <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/Thalpe Beach.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>Thalpe Beach</h4>
+                  <p><br>
+                    About 10 km from Galle, Thalpe Beach is known for its natural rock pools. It’s a peaceful stretch of coastline, ideal for a quiet day away from the more crowded beaches.
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/Kanneliya Forest Reserve.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>Kanneliya Forest Reserve</h4>
+                  <p><br>
+                    A bit further inland, Kanneliya is part of Sri Lanka’s rainforest ecosystem and is a UNESCO Biosphere Reserve. A visit here offers serene hiking trails, waterfalls, and opportunities to spot endemic species of birds and wildlife.
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/Madol Duwa Island.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>Madol Duwa Island</h4>
+                  <p><br>
+                    Famous from Sri Lankan literature, Madol Duwa is an island in Koggala Lake. You can take a boat ride to the island, which is associated with a famous novel by Martin Wickramasinghe, adding a literary touch to your visit.
+                  </p>
+                </div>
+              </div>
+
+              <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/Martin Wickramasinghe Museum of Folk Culture.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>Martin Wickramasinghe Museum of Folk Culture</h4>
+                  <p><br>
+                    Located in Koggala, this museum showcases traditional Sri Lankan village life. It offers an interesting collection of artifacts related to literature, folk music, and ancient tools.
+                  </p>
+                </div>
+              </div>
+
+              <div class="discover__card">
+                <div class="discover__image">
+                  <img src="assets/images/pic/Rumassala Hill.jpg" alt="discover" />
+                </div>
+                <div class="discover__card__content">
+                  <h4>Rumassala Hill</h4>
+                  <p><br>
+                    Near Unawatuna, this hill is steeped in legend and offers beautiful views of the surrounding coastline. According to local folklore, it is part of a mountain that was dropped by Hanuman during the Ramayana.
+                  </p>
+                </div>
+              </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer">
+        <div class="section__container footer__container">
+          <h4>Galle.</h4>
+          <div class="footer__socials">
+            <span>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </span>
+            <span>
+              <a href="#"><i class="ri-instagram-fill"></i></a>
+            </span>
+            <span>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+            </span>
+            <span>
+              <a href="#"><i class="ri-linkedin-fill"></i></a>
+            </span>
+          </div>
+          <p>
+            Cheap Romantic Vacations. Many people feel that there is a limited
+            amount of abundance, wealth, or chance to succeed in life.
+          </p>
+          <ul class="footer__nav">
+            <li class="footer__link"><a href="galle visiting guide home.html">Home</a></li>
+            <li class="footer__link"><a href="about us.html">About</a></li>
+            <li class="footer__link"><a href="#discover">Discover</a></li>
+            <li class="footer__link"><a href="blog.html">Blog</a></li>
+            <li class="footer__link"><a href="journals.html">Journals</a></li>
+            <li class="footer__link"><a href="assets/images/gallery.html">assets/images/gallery</a></li>
+            <li class="footer__link"><a href="galle visiting guide home.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__bar">
+          K.L.A.K.Dewmini © 2024 Web Design Mastery..
+        </div>
+      </div>    
+
+
+<button id="leftButton" class="nav-button" onclick="navigateTo('about us.html')">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+
+    <button id="rightButton" class="nav-button" onclick="navigateTo('blog.html')">
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+
+    <script>
+        const buttons = document.querySelectorAll('.nav-button');
+        let inactivityTimer;
+
+        function navigateTo(url) {
+            window.location.href = url; 
+        }
+
+        function showButtons() {
+            buttons.forEach(button => button.classList.remove('hidden'));
+        }
+
+        function hideButtons() {
+            buttons.forEach(button => button.classList.add('hidden'));
+        }
+
+        function resetInactivityTimer() {
+            showButtons();
+            clearTimeout(inactivityTimer); 
+            inactivityTimer = setTimeout(hideButtons, 1000); 
+        }
+
+        window.addEventListener('mousemove', resetInactivityTimer);
+        window.addEventListener('touchstart', resetInactivityTimer);
+
+        resetInactivityTimer();
+    </script>
+
+
+    
+</body>
+</html>

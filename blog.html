@@ -1,0 +1,210 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>galle guide</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        .nav-button {
+            position: fixed;
+            bottom: 200px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: background-color 0.3s;
+            opacity: 1;
+        }
+
+        .nav-button.hidden {
+            opacity: 0; 
+            pointer-events: none; 
+        }
+
+        .nav-button:hover {
+            background-color: #0056b3;
+        }
+
+        .nav-button i {
+            font-size: 20px;
+        }
+
+        #leftButton {
+            left: 20px;
+        }
+
+        #rightButton {
+            right: 20px;
+        }
+        #scrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #06971aab;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            display: none; 
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        #scrollToTop:hover {
+            background-color: #d10044;
+        }
+
+        #scrollToTop i {
+            font-size: 20px;
+        }
+        .video{
+            display: flex;
+            padding-left: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="nav__bar" >
+        <div class="nav__logo"><a href="#"><img src="assets/images/assets/images/pic/logo.png" alt="logo"  width="70px" height="70px"></a></div>
+        <ul class="nav__links">
+          <li class="link"><a href="galle visiting guide home.html">Home</a></li>
+          <li class="link"><a href="about us.html">About Us</a></li>
+          <li class="link"><a href="discover.html">Discover</a></li>
+          <li class="link"><a href="#blog">Blog</a></li>
+          <li class="link"><a href="journals.html">Journals</a></li>
+          <li class="link"><a href="assets/images/gallery.html">assets/images/gallery</a></li>
+          <li class="link"><a href="galle visiting guide home.html">Contact</a></li>
+          </li>
+        </ul>
+      </div>
+
+      <button id="scrollToTop" onclick="scrollToTop()">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.display = 'block'; // Show button when scrolled 300px down
+            } else {
+                scrollToTopBtn.style.display = 'none'; // Hide button when scrolled above 300px
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+      <script src="main.js"></script>
+
+      <div class="blogs" id="blog">
+        <div class="blogs__container">
+          <h2 class="section__header">Latest on the blogs</h2>
+          <p class="section__subheader">We want to help youto travel better!</p>
+        </div>
+      </div>
+
+
+    <div id="video">
+        <a target="_blank" href="assets/videos/video/videoplayback.mp4">
+      <video src="assets/videos/video\videoplayback.mp4" height="50%" width="40%" autoplay ></video></a>
+      <a target="_blank" href="assets/videos/blog\Galle Fort - Sri Lanka 4K┃ගාලු කොටුව┃காலிக் கோட்டை 🇱🇰.mp4">
+      <video src="assets/videos/blog\Galle Fort - Sri Lanka 4K┃ගාලු කොටුව┃காலிக் கோட்டை 🇱🇰.mp4" height="50%" width="40%" autoplay ></video></a>
+      <a target="_blank" href="assets/videos/blog/Galle, Sri Lanka - Destination Guide.mp4">
+      <video src="assets/videos/blog/Galle, Sri Lanka - Destination Guide.mp4" height="50%" width="40%" autoplay ></video></a>
+      <a target="_blank" href="assets/videos/blog/Rumassala - Galle, Paradise of Srilanka.mp4">
+      <video src="assets/videos/blog/Rumassala - Galle, Paradise of Srilanka.mp4" height="50%" width="40%" autoplay ></video></a>
+      <a target="_blank" href="assets/videos/blog/Sri Lanka. Hikkaduwa (1).mp4">
+      <video src="assets/videos/blog/Sri Lanka. Hikkaduwa (1).mp4" height="50%" width="40%" autoplay ></video></a>
+    </div>
+
+    
+    <button id="leftButton" class="nav-button" onclick="navigateTo('discover.html')">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+
+    <button id="rightButton" class="nav-button" onclick="navigateTo('journals.html')">
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+
+    <script>
+        const buttons = document.querySelectorAll('.nav-button');
+        let inactivityTimer;
+
+        function navigateTo(url) {
+            window.location.href = url; 
+        }
+
+        function showButtons() {
+            buttons.forEach(button => button.classList.remove('hidden'));
+        }
+
+        function hideButtons() {
+            buttons.forEach(button => button.classList.add('hidden'));
+        }
+
+        function resetInactivityTimer() {
+            showButtons();
+            clearTimeout(inactivityTimer); 
+            inactivityTimer = setTimeout(hideButtons, 1000); 
+        }
+
+        window.addEventListener('mousemove', resetInactivityTimer);
+        window.addEventListener('touchstart', resetInactivityTimer);
+
+        resetInactivityTimer();
+    </script>
+
+    <div class="footer">
+        <div class="section__container footer__container">
+          <h4>Galle.</h4>
+          <div class="footer__socials">
+            <span>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </span>
+            <span>
+              <a href="#"><i class="ri-instagram-fill"></i></a>
+            </span>
+            <span>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+            </span>
+            <span>
+              <a href="#"><i class="ri-linkedin-fill"></i></a>
+            </span>
+          </div>
+          <p>
+            Cheap Romantic Vacations. Many people feel that there is a limited
+            amount of abundance, wealth, or chance to succeed in life.
+          </p>
+          <ul class="footer__nav">
+            <li class="footer__link"><a href="galle visiting guide home.html">Home</a></li>
+            <li class="footer__link"><a href="about us.html">About</a></li>
+            <li class="footer__link"><a href="discover.html">Discover</a></li>
+            <li class="footer__link"><a href="#blog">Blog</a></li>
+            <li class="footer__link"><a href="journals.html">Journals</a></li>
+            <li class="footer__link"><a href="assets/images/gallery.html">assets/images/gallery</a></li>
+            <li class="footer__link"><a href="galle visiting guide home.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__bar">
+          K.L.A.K.Dewmini © 2024 Web Design Mastery..
+        </div>
+      </div>
+    
+</body>
+</html>
